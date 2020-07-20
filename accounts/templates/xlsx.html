@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Welcome to Excel sheet{% endblock title %}
+{% block body %}
+    {% for row in sheet %}
+    {% for cell in row %}
+    {%if cell is not None%}
+        {{cell.value}}
+        {% endif %}
+    {% endfor %}
+    {% endfor %}
+{% endblock body %}
